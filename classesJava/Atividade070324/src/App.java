@@ -20,11 +20,17 @@ public class App {
         // meuTenis.calcar();
         // meuTenis.status();
 
-        Garrafa g1 = new Garrafa("Guaraná");
-        g1.status();
-        g1.colocar();
-        g1.abrir();
-        g1.colocar();
-        g1.fechar();
+        // Garrafa g1 = new Garrafa("Guaraná");
+        // g1.status();
+        // g1.colocar();
+        // g1.abrir();
+        // g1.colocar();
+        // g1.fechar();
+
+        Geladeira gela1 = new Geladeira(180, 60);
+        gela1.abrindo();
+        gela1.resfriando();
+        gela1.fechar();
+        gela1.status();
     }
 }
