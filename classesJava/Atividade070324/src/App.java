@@ -27,10 +27,16 @@ public class App {
         // g1.colocar();
         // g1.fechar();
 
-        Geladeira gela1 = new Geladeira(180, 60);
-        gela1.abrindo();
-        gela1.resfriando();
-        gela1.fechar();
-        gela1.status();
+        //Geladeira gela1 = new Geladeira(180, 60);
+        //gela1.abrindo();
+        //gela1.resfriando();
+        //gela1.fechar();
+        //gela1.status();
+
+        Celular celular = new Celular("Apple", "Iphone 11");
+        celular.desbloquear();
+        celular.bloquear();
+        celular.status();
+        celular.desligar();
     }
 }
