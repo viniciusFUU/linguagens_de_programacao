@@ -33,10 +33,35 @@ public class App {
         //gela1.fechar();
         //gela1.status();
 
-        Celular celular = new Celular("Apple", "Iphone 11");
-        celular.desbloquear();
-        celular.bloquear();
-        celular.status();
-        celular.desligar();
+        //Celular celular = new Celular("Samsung", "s23");
+        //celular.desbloquear();
+        //celular.bloquear();
+        //celular.status();
+        //celular.desligar();
+        
+        //Camisa camisa = new Camisa("Armani", "Creme", "sim");
+        //camisa.status();
+        //camisa.vestirCamisa();
+        //camisa.retirarCamisa();
+        //System.out.println(camisa.descobrirTipoCamisa());
+
+        //Headset head1 = new Headset("Vermelho", "hyperX");
+        //head1.status();
+        //head1.ligar();
+        //head1.tocando();
+        //head1.desligar();
+        //head1.tocando();
+
+        //Lampada lampada = new Lampada(300, "Fluorescente");
+        //lampada.ligar();
+        ////lampada.queimou();
+        //lampada.desligar();
+        //lampada.status();
+
+        Controle controle = new Controle("Playstation", 12);
+        controle.ligar();
+        //controle.desligar();
+        controle.troca();
+        controle.status();
     }
 }
