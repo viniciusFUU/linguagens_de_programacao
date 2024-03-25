@@ -1,11 +1,11 @@
 public class Tenis {
-    private String cadarco;
-    private String sola;
+    private String marca;
+    private String cor;
     private boolean desamarrado;
 
     public void status() {
-        System.out.println("Cadarço: " + cadarco);
-        System.out.println("Sola: " + sola);
+        System.out.println("Cadarço: " + marca);
+        System.out.println("Cor: " + cor);
 
         if (desamarrado == true) {
             System.out.println("Tênis desamarrado");
@@ -14,26 +14,26 @@ public class Tenis {
         }
     }
 
-    public Tenis(String sola, String cadarco) {
-        setCadarco(cadarco);
-        setSola(sola);
+    public Tenis(String cor, String marca) {
+        setCadarco(marca);
+        setSola(cor);
         desamarrado = true;
     }
 
     public String getCadarco() {
-        return cadarco;
+        return marca;
     }
 
-    public void setCadarco(String cadarco) {
-        this.cadarco = cadarco;
+    public void setCadarco(String marca) {
+        this.marca = marca;
     }
 
     public String getSola() {
-        return sola;
+        return cor;
     }
 
-    public void setSola(String sola) {
-        this.sola = sola;
+    public void setSola(String cor) {
+        this.cor = cor;
     }
 
     public boolean isDesamarrado() {
