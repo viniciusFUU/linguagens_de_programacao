@@ -19,7 +19,7 @@ public class FormularioJavaFX extends Application {
         FXMLLoader load = new FXMLLoader(getClass().getResource("primary.fxml"));
         Parent root = load.load();
 
-        Scene scene = new Scene(root, 300, 200);
+        Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
