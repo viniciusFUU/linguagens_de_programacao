@@ -16,7 +16,7 @@ public class FormularioJavaFX extends Application {
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("Formulário JavaFX");
 
-        FXMLLoader load = new FXMLLoader(getClass().getResource("primary.fxml"));
+        FXMLLoader load = new FXMLLoader(getClass().getResource("main.fxml"));
         Parent root = load.load();
 
         Scene scene = new Scene(root);
