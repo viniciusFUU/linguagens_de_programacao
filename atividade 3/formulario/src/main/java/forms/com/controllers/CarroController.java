@@ -6,12 +6,13 @@ import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class CarroController {
-    private ObservableList<String> dadosCadastrados = FXCollections.observableArrayList();
+    private ObservableList<String> carrosCadastrados = FXCollections.observableArrayList();
     
     @FXML
     private TextField fabricanteField;
@@ -21,14 +22,21 @@ public class CarroController {
     private TextField modeloCarroField;
 
     @FXML
+    private ListView<String> listViewCarro;
+
+    @FXML
     void handleSendCarro(){
         String fabricante = fabricanteField.getText();
         String cor = corCarroField.getText();
         String modelo = modeloCarroField.getText();
 
-        dadosCadastrados.add("CARRO - " + "Modelo: " + fabricante + ", Modelo: " + modelo + ", Cor: " + cor);
+        carrosCadastrados.add("CARRO - " + "Modelo: " + fabricante + ", Modelo: " + modelo + ", Cor: " + cor);
 
-        exibirDadosCarro(fabricante, modelo, cor);
+        listViewCarro.setItems(carrosCadastrados);
+
+        fabricanteField.clear();
+        modeloCarroField.clear();
+        corCarroField.clear();
     }
 
     public void exibirDadosCarro(String fabricante, String modelo, String cor){

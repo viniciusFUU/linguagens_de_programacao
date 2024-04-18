@@ -30,7 +30,7 @@ public class MainController {
 
     private void openFXML(String fxmlFileName){
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/" + fxmlFileName));
+            Parent root = FXMLLoader.load(getClass().getResource("/forms/com/" + fxmlFileName));
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();

@@ -12,7 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class CanetaController {
-    private ObservableList<String> dadosCadastrados = FXCollections.observableArrayList();
+    private ObservableList<String> canetasCadastradas = FXCollections.observableArrayList();
 
     @FXML
     private TextField marcaField;
@@ -21,6 +21,9 @@ public class CanetaController {
     @FXML
     private TextField tintaField;
 
+    @FXML
+    private ListView<String> listViewCaneta;
+
 
     @FXML 
     void handleSendCaneta(){
@@ -28,9 +31,13 @@ public class CanetaController {
         String cor = corCanetaField.getText();
         String tinta = tintaField.getText();
 
-        dadosCadastrados.add("CANETA - " + "Marca: " + marca + ", Cor: " + cor + ", Tinta: " + tinta);
+        canetasCadastradas.add("CANETA - " + "Marca: " + marca + ", Cor: " + cor + ", Tinta: " + tinta);
 
-        exibirDadosCaneta(marca, cor, tinta);
+        listViewCaneta.setItems(canetasCadastradas);
+
+        marcaField.clear();
+        corCanetaField.clear();
+        tintaField.clear();
     }
 
     public void exibirDadosCaneta(String marca, String cor, String tinta){
@@ -43,19 +50,6 @@ public class CanetaController {
         vbox.setPadding(new Insets(10, 10, 10, 10));
 
         Scene scene = new Scene(vbox, 200, 100);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    void handleMostrarTodos(){
-        Stage stage = new Stage();
-        stage.setTitle("Dados Cadastrados");
-
-        ListView<String> listView = new ListView<>();
-        listView.setItems(dadosCadastrados);
-
-        Scene scene = new Scene(listView, 300, 200);
         stage.setScene(scene);
         stage.show();
     }

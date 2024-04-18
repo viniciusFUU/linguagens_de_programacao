@@ -6,12 +6,13 @@ import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class TenisController {
-    private ObservableList<String> dadosCadastrados = FXCollections.observableArrayList();
+    private ObservableList<String> dadosCadastradosTenis = FXCollections.observableArrayList();
 
     @FXML
     private TextField marcaTenisField;
@@ -21,14 +22,21 @@ public class TenisController {
     private TextField canoTenisField;
 
     @FXML
+    private ListView<String> listViewTenis;
+
+    @FXML
     void handleSendTenis(){
         String marca = marcaTenisField.getText();
         String cor = corTenisField.getText();
         String cano = canoTenisField.getText();
 
-        dadosCadastrados.add("TENIS - " + "Marca: " + marca + ", Cor: " + cor + "Tipo do Cano: " + cano);
+        dadosCadastradosTenis.add("TENIS - " + "Marca: " + marca + ", Cor: " + cor + "Tipo do Cano: " + cano);
 
-        exibirDadosTenis(marca, cor, cano);
+        listViewTenis.setItems(dadosCadastradosTenis);
+
+        marcaTenisField.clear();
+        corTenisField.clear();
+        canoTenisField.clear();
     }
 
     public void exibirDadosTenis(String marca, String cor, String tinta){
