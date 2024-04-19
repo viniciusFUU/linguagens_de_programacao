@@ -1,11 +1,19 @@
 public class Soma{
-    public int soma(int a, int b){
-        return a + b;
+    public String somaFracoes(int numerador1, int denominador1, int numerador2, int denominador2){
+        int numerador = (numerador1*denominador2)+(numerador2*denominador1);
+        int denominador = (denominador1*denominador2);
+
+        while (numerador % 2 == 0 && denominador % 2 == 0) {
+            numerador=numerador/2;
+            denominador=denominador/2;
+        }
+
+        return numerador + "/" + denominador;
     }
 
-    public static void main(String[] args){
-        Soma primeiraSoma = new Soma();
-        int resultado = primeiraSoma.soma(1, 3);
+    public static void main(String[] args) {
+        Soma primeirDivisao = new Soma();
+        String resultado = primeirDivisao.somaFracoes(2, 10, 1, 5);
 
         System.out.println(resultado);
     }

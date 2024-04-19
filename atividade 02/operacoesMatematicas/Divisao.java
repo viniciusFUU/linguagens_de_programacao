@@ -1,15 +1,22 @@
 public class Divisao {
-    public Object divisao(int a, int b){
-        if(a >= b){
-            return (double) a / b;
-        } else {
-            return "Impossivel executar o calculo";
+public String divisao(int numerador1, int denominador1, int numerador2, int denominador2){
+        int numerador = 0;
+        int denominador = 0;
+
+        numerador = (numerador1*denominador2);
+        denominador = (denominador1*numerador2);
+
+        while (numerador % 2 == 0 && denominador % 2 == 0) {
+            numerador=numerador/2;
+            denominador=denominador/2;
         }
+
+        return numerador + "/" + denominador;
     }
 
     public static void main(String[] args) {
         Divisao primeirDivisao = new Divisao();
-        Object resultado = primeirDivisao.divisao(11, 2);
+        String resultado = primeirDivisao.divisao(2, 8, 5, 6);
 
         System.out.println(resultado);
         }
