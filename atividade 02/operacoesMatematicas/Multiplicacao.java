@@ -13,7 +13,7 @@ public class Multiplicacao {
 
     public static void main(String[] args) {
         Multiplicacao primeirMultiplicacao = new Multiplicacao();
-        String resultado = primeirMultiplicacao.multiplicacao(2, 4, 1, 2);
+        String resultado = primeirMultiplicacao.multiplicacao(5, 3, 7, 4);
 
         System.out.println(resultado);
     }

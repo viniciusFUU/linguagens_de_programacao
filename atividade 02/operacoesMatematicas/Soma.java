@@ -13,7 +13,7 @@ public class Soma{
 
     public static void main(String[] args) {
         Soma primeirDivisao = new Soma();
-        String resultado = primeirDivisao.somaFracoes(2, 10, 1, 5);
+        String resultado = primeirDivisao.somaFracoes(2, 5, 3, 7);
 
         System.out.println(resultado);
     }

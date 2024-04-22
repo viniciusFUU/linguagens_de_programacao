@@ -16,7 +16,7 @@ public String divisao(int numerador1, int denominador1, int numerador2, int deno
 
     public static void main(String[] args) {
         Divisao primeirDivisao = new Divisao();
-        String resultado = primeirDivisao.divisao(2, 8, 5, 6);
+        String resultado = primeirDivisao.divisao(5, 4, 7, 2);
 
         System.out.println(resultado);
         }

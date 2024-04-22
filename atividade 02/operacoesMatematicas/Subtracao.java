@@ -28,7 +28,7 @@ public class Subtracao {
 
     public static void main(String[] args) {
         Subtracao primeiSubtracao = new Subtracao();
-        String resultado = primeiSubtracao.subtracao(2, 4, 2, 8);
+        String resultado = primeiSubtracao.subtracao(4, 3, 2, 7);
 
         System.out.println(resultado);
     }
