@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forms.com.controllers.TenisController">
+  <tabs>
+    <Tab text="Cadastrar Carro">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="62.0" layoutY="31.0" text="Cadastrar Carros">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="marcaTenisField" layoutX="61.0" layoutY="98.0" promptText="Marca" />
+                  <TextField fx:id="corTenisField" layoutX="61.0" layoutY="154.0" promptText="Cor" />
+                  <TextField fx:id="canoTenisField" layoutX="61.0" layoutY="215.0" promptText="Cano do Tenis" />
+                  <Button fx:id="enviarDados" layoutX="101.0" layoutY="278.0" mnemonicParsing="false" onAction="#handleSendTenis" prefHeight="25.0" prefWidth="69.0" text="Enviar" />
+                  <ImageView fitHeight="177.0" fitWidth="328.0" layoutX="319.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@tenis.jpg" />
+                     </image></ImageView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Lista de Canetas">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listViewTenis" layoutX="20.0" layoutY="33.0" prefHeight="312.0" prefWidth="554.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
