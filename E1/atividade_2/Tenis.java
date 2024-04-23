@@ -15,19 +15,19 @@ public class Tenis {
         setCano(cano);
     }
 
-    public String getCadarco() {
+    public String getMarca() {
         return marca;
     }
 
-    public void setCadarco(String marca) {
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
-    public String getSola() {
+    public String getCor() {
         return cor;
     }
 
-    public void setSola(String cor) {
+    public void setCor(String cor) {
         this.cor = cor;
     }
 
