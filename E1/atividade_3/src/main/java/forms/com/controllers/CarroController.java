@@ -30,9 +30,10 @@ public class CarroController {
         String cor = corCarroField.getText();
         String modelo = modeloCarroField.getText();
 
-        carrosCadastrados.add("CARRO - " + "Modelo: " + fabricante + ", Modelo: " + modelo + ", Cor: " + cor);
+        carrosCadastrados.add("CARRO - " + "Fabricante: " + fabricante + ", Modelo: " + modelo + ", Cor: " + cor);
 
         listViewCarro.setItems(carrosCadastrados);
+        exibirDadosCarro(fabricante, modelo, cor);
 
         fabricanteField.clear();
         modeloCarroField.clear();
@@ -43,7 +44,7 @@ public class CarroController {
         Stage stage = new Stage();
         stage.setTitle("Dados");
 
-        Label label = new Label("Fabricante: " + fabricante + ", Modelo: " + modelo + ", Cor: " + cor);
+        Label label = new Label("Conteúdo cadastrado: \n" + "Fabricante: " + fabricante + ", Modelo: " + modelo + ", Cor: " + cor);
         VBox vbox = new VBox(label);
         vbox.setSpacing(10);
         vbox.setPadding(new Insets(10, 10, 10, 10));

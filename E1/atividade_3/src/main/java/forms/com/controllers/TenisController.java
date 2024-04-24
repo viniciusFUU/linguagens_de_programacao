@@ -30,9 +30,10 @@ public class TenisController {
         String cor = corTenisField.getText();
         String cano = canoTenisField.getText();
 
-        dadosCadastradosTenis.add("TENIS - " + "Marca: " + marca + ", Cor: " + cor + "Tipo do Cano: " + cano);
+        dadosCadastradosTenis.add("TENIS - " + "Marca: " + marca + ", Cor: " + cor + ", Tipo do Cano: " + cano);
 
         listViewTenis.setItems(dadosCadastradosTenis);
+        exibirDadosTenis(marca, cor, cano);
 
         marcaTenisField.clear();
         corTenisField.clear();
@@ -43,7 +44,7 @@ public class TenisController {
         Stage stage = new Stage();
         stage.setTitle("Dados");
 
-        Label label = new Label("Marca: " + marca + ", Cor: " + cor + ", Tipo do Cano: " + tinta);
+        Label label = new Label("Conteúdo cadastrado: \n" + "Marca: " + marca + ", Cor: " + cor + ", Tipo do Cano: " + tinta);
         VBox vbox = new VBox(label);
         vbox.setSpacing(10);
         vbox.setPadding(new Insets(10, 10, 10, 10));

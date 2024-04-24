@@ -28,12 +28,12 @@
                   <Button fx:id="enviarDados" layoutX="101.0" layoutY="278.0" mnemonicParsing="false" onAction="#handleSendTenis" prefHeight="25.0" prefWidth="69.0" text="Enviar" />
                   <ImageView fitHeight="177.0" fitWidth="328.0" layoutX="319.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@tenis.jpg" />
+                        <Image url="@tenis_sem_fundo.png" />
                      </image></ImageView>
                </children></AnchorPane>
       </content>
     </Tab>
-    <Tab text="Lista de Canetas">
+    <Tab text="Lista de Tenis">
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>

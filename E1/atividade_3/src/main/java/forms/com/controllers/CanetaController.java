@@ -34,6 +34,7 @@ public class CanetaController {
         canetasCadastradas.add("CANETA - " + "Marca: " + marca + ", Cor: " + cor + ", Tinta: " + tinta);
 
         listViewCaneta.setItems(canetasCadastradas);
+        exibirDadosCaneta(marca, cor, tinta);
 
         marcaField.clear();
         corCanetaField.clear();
@@ -44,7 +45,7 @@ public class CanetaController {
         Stage stage = new Stage();
         stage.setTitle("Dados");
 
-        Label label = new Label("Marca: " + marca + ", Cor: " + cor + ", Tinta: " + tinta);
+        Label label = new Label("Conteúdo cadastrado: \n" + "Marca: " + marca + ", Cor: " + cor + ", Tinta: " + tinta);
         VBox vbox = new VBox(label);
         vbox.setSpacing(10);
         vbox.setPadding(new Insets(10, 10, 10, 10));
