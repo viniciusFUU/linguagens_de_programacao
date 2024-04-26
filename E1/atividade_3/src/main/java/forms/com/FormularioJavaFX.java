@@ -14,7 +14,7 @@ import java.io.IOException;
 public class FormularioJavaFX extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
-        primaryStage.setTitle("Formulário JavaFX");
+        primaryStage.setTitle("Cadastre seu objeto!");
 
         FXMLLoader load = new FXMLLoader(getClass().getResource("main.fxml"));
         Parent root = load.load();
