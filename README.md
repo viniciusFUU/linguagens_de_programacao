@@ -1,6 +1,15 @@
 # Linguagem de programação 1
 
-<p>Repositório dedicado à matéria de LP1 do curso de banco de dados do Segundo Semestre da FATEC.</p>
+### Repositório dedicado à matéria de LP1 do curso de banco de dados do Segundo Semestre da FATEC.
+
+<hr>
+
+<p>1ª Atividade - 15 atividades desenvolvendo lógica de programação com algoritmos simples;</p>
+<p>2ª Atividade - Desenvolver 10 abjetos, cada uma delas devendo ter 3 atributos e 3 métodos. E programar um software que faça operações básicas de fração, como: soma, subtração, multiplicação e divisão;</p>
+<p>3ª Atividade - Desenvolver um software capaz de cadastrar 3 dos 10 objetos desenvolvidos anteriormente.<br>Requisito era utilizar java  e a professora recomendou o uso de javafx para desenvolver a interface;</p>
+<p>4ª Atividade - Apresentação avaliativa onde deveriamos mostrar em prática os desáfios propostos pela professora.</p>
+
+<hr>
 
 <p>Aluno: Vinícius Augusto da Silva Monteiro</p>
 <p>Email: vinicius.monteiro3@fatec.sp.gov.br</p>
