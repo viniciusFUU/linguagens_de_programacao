@@ -1,7 +1,6 @@
 package forms.com.controllers;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import forms.com.connection.DbConnection;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -12,28 +11,35 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class CanetaController {
-    private ObservableList<String> canetasCadastradas = FXCollections.observableArrayList();
 
     @FXML
     private TextField marcaField;
+    
     @FXML
     private TextField corCanetaField;
+    
     @FXML
     private TextField tintaField;
 
     @FXML
     private ListView<String> listViewCaneta;
 
-
     @FXML 
-    void handleSendCaneta(){
+    public void handleSendCaneta(){
+        DbConnection db = new DbConnection();
+
         String marca = marcaField.getText();
         String cor = corCanetaField.getText();
         String tinta = tintaField.getText();
 
-        canetasCadastradas.add("CANETA - " + "Marca: " + marca + ", Cor: " + cor + ", Tinta: " + tinta);
+        try {
+            db.executeWithOutReturn("INSERT INTO caneta (marca, cor, tinta) VALUES('"+ marca +"', '"+ cor +"', '"+ tinta +"')");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally{
+            db.Desconnect();
+        }
 
-        listViewCaneta.setItems(canetasCadastradas);
         exibirDadosCaneta(marca, cor, tinta);
 
         marcaField.clear();

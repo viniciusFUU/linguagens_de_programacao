@@ -1,7 +1,6 @@
 package forms.com.controllers;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import forms.com.connection.DbConnection;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -12,8 +11,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class TenisController {
-    private ObservableList<String> dadosCadastradosTenis = FXCollections.observableArrayList();
-
     @FXML
     private TextField marcaTenisField;
     @FXML
@@ -26,13 +23,20 @@ public class TenisController {
 
     @FXML
     void handleSendTenis(){
+        DbConnection db = new DbConnection();
+
         String marca = marcaTenisField.getText();
         String cor = corTenisField.getText();
         String cano = canoTenisField.getText();
 
-        dadosCadastradosTenis.add("TENIS - " + "Marca: " + marca + ", Cor: " + cor + ", Tipo do Cano: " + cano);
+        try {
+            db.executeWithOutReturn("INSERT INTO tenis (marca, cor, cano) VALUES ('"+ marca +"', '"+ cor +"', '"+ cano +"')");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally{
+            db.Desconnect();
+        }
 
-        listViewTenis.setItems(dadosCadastradosTenis);
         exibirDadosTenis(marca, cor, cano);
 
         marcaTenisField.clear();

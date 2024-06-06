@@ -1,5 +1,6 @@
 package forms.com.controllers;
 
+import forms.com.connection.DbConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -26,11 +27,19 @@ public class CarroController {
 
     @FXML
     void handleSendCarro(){
+        DbConnection db = new DbConnection();
+
         String fabricante = fabricanteField.getText();
         String cor = corCarroField.getText();
         String modelo = modeloCarroField.getText();
 
-        carrosCadastrados.add("CARRO - " + "Fabricante: " + fabricante + ", Modelo: " + modelo + ", Cor: " + cor);
+        try {
+            db.executeWithOutReturn("INSERT INTO carro (fabricante, modelo, cor) VALUES ('"+ fabricante +"', '"+ modelo +"', '"+ cor +"')");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally{
+            db.Desconnect();
+        }
 
         listViewCarro.setItems(carrosCadastrados);
         exibirDadosCarro(fabricante, modelo, cor);
