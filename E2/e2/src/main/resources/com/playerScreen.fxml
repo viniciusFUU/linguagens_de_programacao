@@ -9,31 +9,36 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="488.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.JogadorController">
    <children>
-      <Label layoutX="225.0" layoutY="115.0" text="Nome:">
+      <Label layoutX="225.0" layoutY="79.0" text="Nome:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="221.0" layoutY="179.0" text="Posição">
+      <Label layoutX="221.0" layoutY="143.0" text="Posição">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="226.0" layoutY="246.0" text="Clube:">
+      <Label layoutX="226.0" layoutY="210.0" text="Clube:">
          <font>
             <Font name="SansSerif Regular" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="nomeField" layoutX="138.0" layoutY="145.0" prefHeight="25.0" prefWidth="234.0" />
-      <TextField fx:id="posicaoField" layoutX="139.0" layoutY="276.0" prefHeight="25.0" prefWidth="234.0" />
-      <TextField fx:id="clubeField" layoutX="138.0" layoutY="209.0" prefHeight="25.0" prefWidth="234.0" />
+      <TextField fx:id="nomeField" layoutX="138.0" layoutY="109.0" prefHeight="25.0" prefWidth="234.0" />
+      <TextField fx:id="posicaoField" layoutX="139.0" layoutY="240.0" prefHeight="25.0" prefWidth="234.0" />
+      <TextField fx:id="clubeField" layoutX="138.0" layoutY="173.0" prefHeight="25.0" prefWidth="234.0" />
       <ImageView fitHeight="430.0" fitWidth="214.0" layoutX="274.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="186.0" layoutY="47.0" text="Jogadores">
+      <Label layoutX="186.0" layoutY="34.0" text="Jogadores">
          <font>
             <Font name="SansSerif Bold" size="27.0" />
          </font>
       </Label>
-      <Button onAction="#createJogador" layoutX="183.0" layoutY="324.0" mnemonicParsing="false" text="Criar Jogador">
+      <Button layoutX="183.0" layoutY="288.0" mnemonicParsing="false" onAction="#createJogador" text="Criar Jogador">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="173.0" layoutY="351.0" mnemonicParsing="false" onAction="#createJogador" text="Lista Jogadores">
          <font>
             <Font size="20.0" />
          </font>
