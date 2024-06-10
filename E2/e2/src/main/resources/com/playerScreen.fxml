@@ -25,8 +25,8 @@
          </font>
       </Label>
       <TextField fx:id="nomeField" layoutX="138.0" layoutY="109.0" prefHeight="25.0" prefWidth="234.0" />
-      <TextField fx:id="posicaoField" layoutX="139.0" layoutY="240.0" prefHeight="25.0" prefWidth="234.0" />
-      <TextField fx:id="clubeField" layoutX="138.0" layoutY="173.0" prefHeight="25.0" prefWidth="234.0" />
+      <TextField fx:id="clubeField" layoutX="139.0" layoutY="240.0" prefHeight="25.0" prefWidth="234.0" />
+      <TextField fx:id="posicaoField" layoutX="138.0" layoutY="173.0" prefHeight="25.0" prefWidth="234.0" />
       <ImageView fitHeight="430.0" fitWidth="214.0" layoutX="274.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="186.0" layoutY="34.0" text="Jogadores">
          <font>
@@ -38,7 +38,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="173.0" layoutY="351.0" mnemonicParsing="false" onAction="#createJogador" text="Lista Jogadores">
+      <Button layoutX="173.0" layoutY="351.0" mnemonicParsing="false" onAction="#openLista" text="Lista Jogadores">
          <font>
             <Font size="20.0" />
          </font>

@@ -3,7 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -24,21 +23,15 @@
             <Font name="SansSerif Regular" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="nomeField" layoutX="138.0" layoutY="109.0" prefHeight="25.0" prefWidth="234.0" />
-      <TextField fx:id="clubeField" layoutX="139.0" layoutY="240.0" prefHeight="25.0" prefWidth="234.0" />
-      <TextField fx:id="posicaoField" layoutX="138.0" layoutY="173.0" prefHeight="25.0" prefWidth="234.0" />
-      <ImageView fitHeight="430.0" fitWidth="214.0" layoutX="274.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="186.0" layoutY="34.0" text="Jogadores">
+      <TextField fx:id="nomeEdit" layoutX="138.0" layoutY="109.0" prefHeight="25.0" prefWidth="234.0" />
+      <TextField fx:id="clubeEdit" layoutX="139.0" layoutY="240.0" prefHeight="25.0" prefWidth="234.0" />
+      <TextField fx:id="posicaoEdit" layoutX="138.0" layoutY="173.0" prefHeight="25.0" prefWidth="234.0" />
+      <Label layoutX="149.0" layoutY="35.0" text="Editar Jogador">
          <font>
             <Font name="SansSerif Bold" size="27.0" />
          </font>
       </Label>
-      <Button layoutX="183.0" layoutY="288.0" mnemonicParsing="false" onAction="#createJogador" text="Criar Jogador">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button layoutX="173.0" layoutY="351.0" mnemonicParsing="false" onAction="#openLista" text="Lista Jogadores">
+      <Button layoutX="178.0" layoutY="308.0" mnemonicParsing="false" onAction="#updateJogador" text="Editar Jogador">
          <font>
             <Font size="20.0" />
          </font>

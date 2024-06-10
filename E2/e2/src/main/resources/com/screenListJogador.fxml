@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.JogadorController">
    <children>
       <ListView fx:id="viewJogadores" layoutX="38.0" layoutY="43.0" prefHeight="296.0" prefWidth="393.0" />
       <Label layoutX="38.0" layoutY="14.0" text="Lista de Jogadores">
@@ -15,12 +15,12 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button layoutX="87.0" layoutY="380.0" mnemonicParsing="false" text="Editar">
+      <Button onAction="#openEditJogador" layoutX="87.0" layoutY="380.0" mnemonicParsing="false" text="Editar">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="323.0" layoutY="380.0" mnemonicParsing="false" text="Excluir">
+      <Button onAction="#deleteJogador" layoutX="323.0" layoutY="380.0" mnemonicParsing="false" text="Excluir">
          <font>
             <Font size="18.0" />
          </font>
