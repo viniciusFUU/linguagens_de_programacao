@@ -3,42 +3,47 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="488.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.JogadorController">
    <children>
-      <Label layoutX="225.0" layoutY="79.0" text="Nome:">
+      <Label layoutX="116.0" layoutY="79.0" text="Nome:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="221.0" layoutY="143.0" text="Posição">
+      <Label layoutX="112.0" layoutY="143.0" text="Posição">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="226.0" layoutY="210.0" text="Clube:">
+      <Label layoutX="117.0" layoutY="210.0" text="Clube:">
          <font>
             <Font name="SansSerif Regular" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="nomeField" layoutX="138.0" layoutY="109.0" prefHeight="25.0" prefWidth="234.0" />
-      <TextField fx:id="clubeField" layoutX="139.0" layoutY="240.0" prefHeight="25.0" prefWidth="234.0" />
-      <TextField fx:id="posicaoField" layoutX="138.0" layoutY="173.0" prefHeight="25.0" prefWidth="234.0" />
-      <ImageView fitHeight="430.0" fitWidth="214.0" layoutX="274.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="186.0" layoutY="34.0" text="Jogadores">
+      <TextField fx:id="nomeField" layoutX="29.0" layoutY="109.0" prefHeight="25.0" prefWidth="234.0" />
+      <TextField fx:id="clubeField" layoutX="30.0" layoutY="240.0" prefHeight="25.0" prefWidth="234.0" />
+      <TextField fx:id="posicaoField" layoutX="29.0" layoutY="173.0" prefHeight="25.0" prefWidth="234.0" />
+      <ImageView fitHeight="219.0" fitWidth="214.0" layoutX="264.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cassio.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="77.0" layoutY="34.0" text="Jogadores">
          <font>
             <Font name="SansSerif Bold" size="27.0" />
          </font>
       </Label>
-      <Button layoutX="183.0" layoutY="288.0" mnemonicParsing="false" onAction="#createJogador" text="Criar Jogador">
+      <Button layoutX="74.0" layoutY="288.0" mnemonicParsing="false" onAction="#createJogador" text="Criar Jogador">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="173.0" layoutY="351.0" mnemonicParsing="false" onAction="#openLista" text="Lista Jogadores">
+      <Button layoutX="64.0" layoutY="351.0" mnemonicParsing="false" onAction="#openLista" text="Lista Jogadores">
          <font>
             <Font size="20.0" />
          </font>
